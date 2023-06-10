@@ -1,0 +1,6 @@
+@use 'sass:math';
+header {
+  background-color: $header-bg-color;
+  color: $header-text-color;
+  padding: math.div($hero-padding, 10);
+}

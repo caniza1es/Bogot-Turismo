@@ -1,0 +1,13 @@
+.expert-container {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: $expert-img-width; 
+    margin-right: $nav-item-margin; 
+  }
+  
+  .expert-description {
+    flex-grow: $expert-description-flex-grow;
+  }
+}

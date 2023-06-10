@@ -1,0 +1,33 @@
+@use 'sass:math';
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin: $features-margin;
+  gap: $gap;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  div {
+    width: $features-item-width;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  img {
+    width: $features-image-width;
+    margin-bottom: $features-image-margin-bottom;
+  }
+
+  h2 {
+    font-size: $features-title-font-size;
+    margin-bottom: math.div($nav-item-margin, 2);
+  }
+
+  p {
+    font-size: $features-paragraph-font-size;
+  }
+}

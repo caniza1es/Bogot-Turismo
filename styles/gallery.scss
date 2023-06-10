@@ -1,0 +1,38 @@
+@use 'sass:math';
+.gallery {
+  display: grid;
+  grid-template-columns: $gallery-grid-columns;
+  grid-template-rows: $gallery-grid-rows;
+  gap: $gallery-gap;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    
+    h2 {
+      font-size: $hero-title-font-size - 28px;
+      margin: math.div($nav-item-margin, 2) 0;
+      text-align: center;
+      padding: math.div($nav-item-margin, 2);
+      background-color: #f9f9f9;
+    }
+  }
+}

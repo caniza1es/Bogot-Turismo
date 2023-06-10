@@ -1,0 +1,9 @@
+.button {
+  display: inline-block;
+  background-color: $button-bg-color;
+  color: $button-text-color;
+  font-size: $button-font-size;
+  padding: $button-padding;
+  border-radius: 5px;
+  text-decoration: $link-decoration;
+}

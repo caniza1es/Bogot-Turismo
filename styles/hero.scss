@@ -1,0 +1,39 @@
+@use 'sass:math';
+.hero {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: math.div($hero-padding, 2);
+
+  @media (max-width: $mobile) {
+    padding: math.div($hero-padding, 4);
+  }
+
+  h1 {
+    font-size: $hero-title-font-size;
+    margin-bottom: $nav-item-margin;
+
+    @media (max-width: $mobile) {
+      font-size: math.div($hero-title-font-size, 2);
+    }
+  }
+
+  p {
+    font-size: $hero-paragraph-font-size;
+    margin-bottom: $button-padding;
+
+    @media (max-width: $mobile) {
+      font-size: math.div($hero-paragraph-font-size, 2);
+    }
+  }
+
+  .button {
+    display: inline-block;
+    background-color: $button-bg-color;
+    color: $button-text-color;
+    font-size: $button-font-size;
+    padding: $button-padding;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+}
